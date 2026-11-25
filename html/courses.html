@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Courses | SkillTracker</title>
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/courses.css">
+  <script src="../js/api.js" defer></script>
+  <script src="../js/storage.js" defer></script>
+  <script src="../js/auth.js" defer></script>
+  <script src="../js/courses.js" defer></script>
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="index.html"><span class="brand-mark">S</span><span class="brand-name">Skill<span>Tracker</span></span></a>
+    <div class="nav-label">Learning workspace</div>
+    <nav class="nav-list"><a class="nav-link " href="index.html"><span class="nav-icon">▦</span>Dashboard</a>
+<a class="nav-link active" href="courses.html"><span class="nav-icon">▣</span>My Courses</a>
+<a class="nav-link " href="assignments.html"><span class="nav-icon">☷</span>Assignments</a>
+<a class="nav-link " href="grades.html"><span class="nav-icon">★</span>Grades</a>
+<a class="nav-link " href="notifications.html"><span class="nav-icon">♧</span>Notifications</a>
+<a class="nav-link " href="profile.html"><span class="nav-icon">◉</span>My Profile</a></nav>
+    <div class="sidebar-bottom"><div class="help-card"><strong>Need a hand?</strong><p>Keep learning. Small steps lead to big progress.</p><a href="notifications.html">View updates →</a></div></div>
+  </aside>
+  <main class="main-area">
+    <header class="topbar">
+      <div style="display:flex;align-items:center;gap:12px">
+        <button class="icon-button mobile-menu" id="menuToggle" aria-label="Open menu">☰</button>
+        <div class="breadcrumb">Workspace&nbsp; / &nbsp;<strong>My Courses</strong></div>
+      </div>
+      <div class="top-actions">
+        <a class="icon-button" style="display:grid;place-items:center" href="notifications.html" aria-label="Notifications">♧</a>
+        <div class="user-mini"><div class="avatar" id="topAvatar">DS</div><div><strong id="topUserName">Student</strong><small>Student account</small></div></div>
+        <button class="btn btn-secondary btn-small" id="logoutBtn">Logout</button>
+      </div>
+    </header>
+    <section class="page-content">
+<div class="page-heading"><div><p class="eyebrow">Your learning library</p><h1>My Courses</h1><p>Explore your enrolled courses and keep track of your progress.</p></div></div>
+<div class="toolbar"><input class="input" id="courseSearch" placeholder="Search courses..."><select class="select" id="courseFilter"><option value="all">All courses</option><option value="In progress">In progress</option><option value="Completed">Completed</option></select></div>
+<div class="grid-3" id="coursesGrid"></div>
+</section>
+  </main>
+</div>
+<div class="toast" id="toast"></div>
+</body>
+</html>

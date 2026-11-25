@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grades | SkillTracker</title>
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/grades.css">
+  <script src="../js/api.js" defer></script>
+  <script src="../js/storage.js" defer></script>
+  <script src="../js/auth.js" defer></script>
+  <script src="../js/grades.js" defer></script>
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="index.html"><span class="brand-mark">S</span><span class="brand-name">Skill<span>Tracker</span></span></a>
+    <div class="nav-label">Learning workspace</div>
+    <nav class="nav-list"><a class="nav-link " href="index.html"><span class="nav-icon">▦</span>Dashboard</a>
+<a class="nav-link " href="courses.html"><span class="nav-icon">▣</span>My Courses</a>
+<a class="nav-link " href="assignments.html"><span class="nav-icon">☷</span>Assignments</a>
+<a class="nav-link active" href="grades.html"><span class="nav-icon">★</span>Grades</a>
+<a class="nav-link " href="notifications.html"><span class="nav-icon">♧</span>Notifications</a>
+<a class="nav-link " href="profile.html"><span class="nav-icon">◉</span>My Profile</a></nav>
+    <div class="sidebar-bottom"><div class="help-card"><strong>Need a hand?</strong><p>Keep learning. Small steps lead to big progress.</p><a href="notifications.html">View updates →</a></div></div>
+  </aside>
+  <main class="main-area">
+    <header class="topbar">
+      <div style="display:flex;align-items:center;gap:12px">
+        <button class="icon-button mobile-menu" id="menuToggle" aria-label="Open menu">☰</button>
+        <div class="breadcrumb">Workspace&nbsp; / &nbsp;<strong>Grades</strong></div>
+      </div>
+      <div class="top-actions">
+        <a class="icon-button" style="display:grid;place-items:center" href="notifications.html" aria-label="Notifications">♧</a>
+        <div class="user-mini"><div class="avatar" id="topAvatar">DS</div><div><strong id="topUserName">Student</strong><small>Student account</small></div></div>
+        <button class="btn btn-secondary btn-small" id="logoutBtn">Logout</button>
+      </div>
+    </header>
+    <section class="page-content">
+<div class="page-heading"><div><p class="eyebrow">Your results</p><h1>Grades & Performance</h1><p>Review your marks and understand your academic progress.</p></div></div>
+<div class="grid-2" style="margin-bottom:20px">
+  <div class="card card-pad grade-summary"><div class="grade-circle" id="gradeAverage">0%</div><div><h2 style="font:700 17px Manrope;margin-bottom:6px">Overall average</h2><p class="muted" style="margin:0">Based on graded assignments</p></div></div>
+  <div class="card card-pad"><p class="eyebrow">Performance snapshot</p><div class="grade-score" id="gradedCount">0</div><p class="muted" style="margin:0">Assignments graded</p></div>
+</div>
+<div class="card table-wrap"><table><thead><tr><th>Assignment</th><th>Course</th><th>Score</th><th>Feedback</th></tr></thead><tbody id="gradesTable"></tbody></table></div>
+</section>
+  </main>
+</div>
+<div class="toast" id="toast"></div>
+</body>
+</html>

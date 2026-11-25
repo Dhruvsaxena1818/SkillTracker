@@ -1,0 +1,35 @@
+.login-page { min-height: 100vh; display: grid; grid-template-columns: 1.05fr .95fr; background: #fff; }
+.login-visual {
+  padding: 48px 7%; color: #fff; position: relative; overflow: hidden;
+  background: radial-gradient(circle at 15% 20%, #7779ff 0, transparent 32%),
+              linear-gradient(145deg, #191c3a, #34377d 65%, #5759d4);
+  display: flex; flex-direction: column; justify-content: space-between;
+}
+.login-visual:after { content:""; position:absolute; width:420px; height:420px; border:1px solid #ffffff22; border-radius:50%; right:-120px; bottom:-130px; box-shadow:0 0 0 45px #ffffff08,0 0 0 90px #ffffff06; }
+.login-brand { display:flex; align-items:center; gap:12px; font:800 20px Manrope; position:relative; z-index:1; }
+.login-brand .brand-mark { background:#ffffff25; border:1px solid #ffffff35; }
+.visual-copy { max-width:540px; position:relative; z-index:1; }
+.visual-copy .eyebrow { color:#bfc0ff; }
+.visual-copy h1 { font-size:clamp(35px,4.6vw,58px); line-height:1.12; letter-spacing:-2px; margin-bottom:18px; }
+.visual-copy p { color:#d1d3f1; line-height:1.8; font-size:15px; max-width:450px; }
+.visual-foot { color:#bfc1e1; font-size:11px; position:relative; z-index:1; }
+.login-panel { display:grid; place-items:center; padding:45px 25px; }
+.login-box { width:min(100%,410px); }
+.login-box h2 { font:800 28px Manrope; letter-spacing:-1px; margin:0 0 8px; }
+.login-box > p { color:var(--muted); margin-bottom:30px; line-height:1.6; }
+.login-box .field { margin-bottom:19px; }
+.password-wrap { position:relative; }
+.password-wrap .input { padding-right:65px; }
+.password-toggle { position:absolute; right:12px; top:50%; transform:translateY(-50%); border:0; background:none; color:var(--primary); font-size:11px; font-weight:800; }
+.login-submit { width:100%; padding:14px; margin-top:5px; }
+.login-error { display:none; background:var(--red-soft); color:#b34b55; border-radius:10px; padding:11px 13px; margin-bottom:15px; font-size:12px; }
+.login-error.show { display:block; }
+.demo-note { margin-top:22px; padding:14px; background:#f6f6ff; border:1px solid #ececff; border-radius:12px; color:#6667b9; font-size:11px; line-height:1.7; }
+@media(max-width:800px) {
+ .login-page { grid-template-columns:1fr; }
+ .login-visual { min-height:260px; padding:28px 25px; }
+ .visual-copy { margin:45px 0 25px; }
+ .visual-copy h1 { font-size:35px; }
+ .visual-foot { display:none; }
+ .login-panel { padding:40px 24px 55px; }
+}

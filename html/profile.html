@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile | SkillTracker</title>
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/profile.css">
+  <script src="../js/api.js" defer></script>
+  <script src="../js/storage.js" defer></script>
+  <script src="../js/auth.js" defer></script>
+  <script src="../js/profile.js" defer></script>
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="index.html"><span class="brand-mark">S</span><span class="brand-name">Skill<span>Tracker</span></span></a>
+    <div class="nav-label">Learning workspace</div>
+    <nav class="nav-list"><a class="nav-link " href="index.html"><span class="nav-icon">▦</span>Dashboard</a>
+<a class="nav-link " href="courses.html"><span class="nav-icon">▣</span>My Courses</a>
+<a class="nav-link " href="assignments.html"><span class="nav-icon">☷</span>Assignments</a>
+<a class="nav-link " href="grades.html"><span class="nav-icon">★</span>Grades</a>
+<a class="nav-link " href="notifications.html"><span class="nav-icon">♧</span>Notifications</a>
+<a class="nav-link active" href="profile.html"><span class="nav-icon">◉</span>My Profile</a></nav>
+    <div class="sidebar-bottom"><div class="help-card"><strong>Need a hand?</strong><p>Keep learning. Small steps lead to big progress.</p><a href="notifications.html">View updates →</a></div></div>
+  </aside>
+  <main class="main-area">
+    <header class="topbar">
+      <div style="display:flex;align-items:center;gap:12px">
+        <button class="icon-button mobile-menu" id="menuToggle" aria-label="Open menu">☰</button>
+        <div class="breadcrumb">Workspace&nbsp; / &nbsp;<strong>My Profile</strong></div>
+      </div>
+      <div class="top-actions">
+        <a class="icon-button" style="display:grid;place-items:center" href="notifications.html" aria-label="Notifications">♧</a>
+        <div class="user-mini"><div class="avatar" id="topAvatar">DS</div><div><strong id="topUserName">Student</strong><small>Student account</small></div></div>
+        <button class="btn btn-secondary btn-small" id="logoutBtn">Logout</button>
+      </div>
+    </header>
+    <section class="page-content">
+<div class="page-heading"><div><p class="eyebrow">Account settings</p><h1>My Profile</h1><p>Manage your student information.</p></div></div>
+<div class="card" style="overflow:hidden;max-width:850px"><div class="profile-cover"></div><div class="profile-avatar" id="profileAvatar">DS</div><div class="profile-info"><h2 id="profileHeading" style="font:800 20px Manrope;margin:10px 0 4px">Student</h2><p class="muted" id="profileEmail"></p><hr style="border:0;border-top:1px solid var(--line);margin:22px 0">
+<form id="profileForm"><div class="grid-2"><div class="field"><label for="fullName">Full name</label><input class="input" id="fullName" required></div><div class="field"><label for="profileEmailInput">Email address</label><input class="input" id="profileEmailInput" type="email" required></div><div class="field"><label for="studentId">Student ID</label><input class="input" id="studentId" value="ST-2026-014" disabled></div><div class="field"><label for="studyProgram">Program</label><input class="input" id="studyProgram" value="Computer Science"></div></div><button class="btn" type="submit">Save changes</button></form></div></div>
+</section>
+  </main>
+</div>
+<div class="toast" id="toast"></div>
+</body>
+</html>

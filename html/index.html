@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | SkillTracker</title>
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <script src="../js/api.js" defer></script>
+  <script src="../js/storage.js" defer></script>
+  <script src="../js/auth.js" defer></script>
+  <script src="../js/dashboard.js" defer></script>
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="index.html"><span class="brand-mark">S</span><span class="brand-name">Skill<span>Tracker</span></span></a>
+    <div class="nav-label">Learning workspace</div>
+    <nav class="nav-list"><a class="nav-link active" href="index.html"><span class="nav-icon">▦</span>Dashboard</a>
+<a class="nav-link " href="courses.html"><span class="nav-icon">▣</span>My Courses</a>
+<a class="nav-link " href="assignments.html"><span class="nav-icon">☷</span>Assignments</a>
+<a class="nav-link " href="grades.html"><span class="nav-icon">★</span>Grades</a>
+<a class="nav-link " href="notifications.html"><span class="nav-icon">♧</span>Notifications</a>
+<a class="nav-link " href="profile.html"><span class="nav-icon">◉</span>My Profile</a></nav>
+    <div class="sidebar-bottom"><div class="help-card"><strong>Need a hand?</strong><p>Keep learning. Small steps lead to big progress.</p><a href="notifications.html">View updates →</a></div></div>
+  </aside>
+  <main class="main-area">
+    <header class="topbar">
+      <div style="display:flex;align-items:center;gap:12px">
+        <button class="icon-button mobile-menu" id="menuToggle" aria-label="Open menu">☰</button>
+        <div class="breadcrumb">Workspace&nbsp; / &nbsp;<strong>Dashboard</strong></div>
+      </div>
+      <div class="top-actions">
+        <a class="icon-button" style="display:grid;place-items:center" href="notifications.html" aria-label="Notifications">♧</a>
+        <div class="user-mini"><div class="avatar" id="topAvatar">DS</div><div><strong id="topUserName">Student</strong><small>Student account</small></div></div>
+        <button class="btn btn-secondary btn-small" id="logoutBtn">Logout</button>
+      </div>
+    </header>
+    <section class="page-content">
+<div class="welcome-banner">
+  <div><p class="eyebrow" style="color:#d6d6ff">YOUR LEARNING SPACE</p><h2 id="welcomeTitle">Good to see you!</h2><p>Here’s your learning overview. Keep your momentum going.</p></div>
+  <div class="welcome-art">✦</div>
+</div>
+<div class="page-heading"><div><p class="eyebrow">Overview</p><h1>Dashboard</h1><p>Track your courses, assignments and progress in one place.</p></div><a class="btn" href="courses.html">Explore courses →</a></div>
+<div class="grid-4" id="statsGrid">
+  <div class="card stat-card"><div class="stat-top"><span class="stat-icon">▣</span></div><h3 id="courseCount">0</h3><p>Enrolled courses</p></div>
+  <div class="card stat-card"><div class="stat-top"><span class="stat-icon">☷</span></div><h3 id="assignmentCount">0</h3><p>Total assignments</p></div>
+  <div class="card stat-card"><div class="stat-top"><span class="stat-icon">◷</span></div><h3 id="pendingCount">0</h3><p>Pending assignments</p></div>
+  <div class="card stat-card"><div class="stat-top"><span class="stat-icon">★</span></div><h3 id="averageGrade">0%</h3><p>Average grade</p></div>
+</div>
+<div class="dashboard-lower">
+  <div class="card card-pad"><div class="section-title"><h2>Continue learning</h2><a href="courses.html">View all</a></div><div class="grid-2" id="dashboardCourses"></div></div>
+  <div class="card card-pad"><div class="section-title"><h2>Upcoming assignments</h2><a href="assignments.html">View all</a></div><div id="upcomingAssignments"></div></div>
+</div>
+</section>
+  </main>
+</div>
+<div class="toast" id="toast"></div>
+</body>
+</html>

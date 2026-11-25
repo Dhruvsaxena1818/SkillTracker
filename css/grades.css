@@ -1,0 +1,3 @@
+.grade-score { font:800 30px Manrope; color:var(--primary); }
+.grade-summary { display:flex; align-items:center; gap:20px; }
+.grade-circle { width:92px; height:92px; border-radius:50%; display:grid; place-items:center; border:8px solid #e7e7ff; color:var(--primary); font:800 20px Manrope; }

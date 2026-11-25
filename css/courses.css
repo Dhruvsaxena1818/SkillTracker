@@ -1,0 +1,8 @@
+.toolbar { display:flex; gap:12px; margin-bottom:20px; }
+.toolbar .input { max-width:330px; }
+.toolbar .select { max-width:180px; }
+.course-detail-hero { padding:30px; color:#fff; border-radius:20px; background:linear-gradient(120deg,#34377d,#7778f2); margin-bottom:20px; }
+.lesson-list { display:grid; gap:10px; }
+.lesson-row { display:flex; align-items:center; justify-content:space-between; padding:14px; border:1px solid var(--line); border-radius:12px; gap:12px; }
+.lesson-row strong { font-size:12px; }
+@media(max-width:600px) { .toolbar { flex-direction:column; } .toolbar .input,.toolbar .select { max-width:none; } }

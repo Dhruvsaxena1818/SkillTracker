@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign in | SkillTracker</title>
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/login.css">
+  <script src="../js/storage.js" defer></script>
+  <script src="../js/auth.js" defer></script>
+</head>
+<body>
+<main class="login-page">
+  <section class="login-visual">
+    <a class="login-brand" href="login.html"><span class="brand-mark">S</span> SkillTracker</a>
+    <div class="visual-copy">
+      <p class="eyebrow">Your learning journey starts here</p>
+      <h1>Learn with purpose. Grow with confidence.</h1>
+      <p>One organised space for your courses, assignments and learning progress. Pick up where you left off and keep moving forward.</p>
+    </div>
+    <div class="visual-foot">© 2026 SkillTracker · Student learning workspace</div>
+  </section>
+  <section class="login-panel">
+    <div class="login-box">
+      <p class="eyebrow">Welcome back</p>
+      <h2>Sign in to your account</h2>
+      <p>Enter your student credentials to continue learning.</p>
+      <div class="login-error" id="loginError" role="alert"></div>
+      <form id="loginForm">
+        <div class="field"><label for="email">Email address</label><input class="input" id="email" type="email" placeholder="name@example.com" autocomplete="username" required></div>
+        <div class="field"><label for="password">Password</label><div class="password-wrap"><input class="input" id="password" type="password" placeholder="Enter your password" autocomplete="current-password" required><button class="password-toggle" type="button" id="togglePassword">SHOW</button></div></div>
+        <button class="btn login-submit" type="submit">Sign in <span>→</span></button>
+      </form>
+      <div class="demo-note"><strong>Demo account</strong><br>Email: student@skilltracker.com<br>Password: student123</div>
+    </div>
+  </section>
+</main>
+<script>
+  document.getElementById("togglePassword").addEventListener("click", function () {
+    const field = document.getElementById("password");
+    field.type = field.type === "password" ? "text" : "password";
+    this.textContent = field.type === "password" ? "SHOW" : "HIDE";
+  });
+</script>
+</body>
+</html>
